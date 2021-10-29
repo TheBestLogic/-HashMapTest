@@ -9,10 +9,13 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println("Task 2.1");
-        WeightClass wc = new WeightClass();
-        wc.setRandVal();
-        wc.printArrs();
-        wc.getRandomVal();
+        System.out.println("Task 2.2");
+        MyLinkedList<Integer> I = new MyLinkedList<Integer>();
+
+        I.add(35);
+        I.add(55);
+        I.add(5);
+        I.add(3);
+        System.out.println(I.getLast());
     }
 }
