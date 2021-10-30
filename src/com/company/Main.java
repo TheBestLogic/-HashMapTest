@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println("Task 2.2");
+        System.out.println("Task 3.0");
         MyLinkedList<Integer> I = new MyLinkedList<Integer>();
 
         I.add(35);
