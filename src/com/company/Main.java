@@ -1,5 +1,5 @@
 package com.company;
-
+import java.util.Arrays;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -10,12 +10,20 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         System.out.println("Task 3.0");
-        MyLinkedList<Integer> I = new MyLinkedList<Integer>();
+        Random r = new Random();
+        int[] Array = new int[100000];
+        for (int i = 0; i < 100000 ; ++i)
+            Array[i] = r.nextInt(600);
+        Arrays.sort(Array);
+        int isSearch = 0;
+        long time = System.currentTimeMillis();
+        isSearch = SearchInArray.search(Array, 100000, 300);
+        System.out.println(System.currentTimeMillis() - time);
+        System.out.println(isSearch);
+        time = System.currentTimeMillis();
+        isSearch = SearchInArray.binarySearch(Array, 100000, 300);
+        System.out.println(System.currentTimeMillis() - time);
 
-        I.add(35);
-        I.add(55);
-        I.add(5);
-        I.add(3);
-        System.out.println(I.getLast());
+        System.out.println(isSearch);
     }
 }
